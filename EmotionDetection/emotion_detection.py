@@ -28,7 +28,7 @@ def emotion_detector(text_to_analyse):
         sadness = emotions.get('sadness')
         dominant_emotion = max(emotions, key = emotions.get)
     # If the response status code is 500, set label and score to None
-    elif response.status_code == 500:
+    elif response.status_code == 400:
         anger = None
         disgust = None
         fear = None
